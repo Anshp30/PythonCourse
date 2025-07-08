@@ -19,7 +19,7 @@ for food in foods:
     print(food, end= " ")
 
 for price in prices:
-    total = total + price
+    total = total + price  # total += price
 
 print()
 print(f"--YOUR TOTAL IS : ₹{total}  ")

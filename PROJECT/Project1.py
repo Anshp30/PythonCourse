@@ -9,7 +9,7 @@ while True:
     if food.lower() == "q":
         break
     else:
-        price = float(input(f"Enter a price of a {food}: $"))
+        price = float(input(f"Enter a price of a {food}: ₹"))
         foods.append(food)
         prices.append(price)
 
@@ -22,5 +22,5 @@ for price in prices:
     total = total + price
 
 print()
-print(f"--YOUR TOTAL IS : ${total}  ")
+print(f"--YOUR TOTAL IS : ₹{total}  ")
 print("THANK YOU FOR VISITING!")

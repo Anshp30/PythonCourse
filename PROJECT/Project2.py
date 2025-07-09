@@ -23,18 +23,18 @@ else:
     print(f"Ordered item{item_1} not available yet!")
 
 
-another_order = input("Do you want to add another item? (Yes/No)")
+another_order = input("Do you want to add another item? lo(Yes/No)")
 
 if another_order == "Yes":
     item_2 = input("Enter your second item = ")
     if item_2 in menu:
         order_total += menu[item_2]
-        print(f"Item{item_2} has been added to order")
+        print(f"Item {item_2} has been added to order!")
     else:
-        print(f"Orederd item{item_2}not available yet!")
+        print(f"Orederd item {item_2} not available yet!")
 
 
-print(f"The Total Amount Of Item To Pay is Rs {order_total}")
-print("Thank You For Visiting!!!!")
+print(f"---The Total Amount Of Item To Pay is Rs {order_total}---")
+print("  ---Thank You For Visiting !--- \n     ---Have a Good Day !---")
 
         

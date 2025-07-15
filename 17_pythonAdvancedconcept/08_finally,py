@@ -1,0 +1,17 @@
+def divide(a,b):
+  try:
+    c = a/b
+    print(c)
+    return c
+  
+  except Exception as e:
+   print(e)
+   return None
+
+#This is always excuted no matter if try complete excuted or not.
+  finally:
+   print("This is always excuted!")
+
+a = int(input("Enter a Number 1 : "))
+b = int(input("Enter a Number 2 : "))
+divide(a,b) 

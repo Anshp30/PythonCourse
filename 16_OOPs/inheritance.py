@@ -1,4 +1,5 @@
-# class A:
+# --------------------------SINGLE LEVEL INHERITANCE---------------------------------------------------------------------
+# # class A:
 #     a=10
 #     b=20
 # class B(A):
@@ -95,44 +96,133 @@
 
 # Create a class person which consist of three object members and two class members and create a another class teacher ehich is inherting from class person and aslo implement constructor chaining and method channing in the example.
 
-class Person:
-    Name = "ANSH"
-    age = 24
-    eduacation ="B.tech"
+# class Person:
+#     Name = "ANSH"
+#     age = 24
+#     eduacation ="B.tech"
 
-    def __init__(self,name,age,education):
+#     def __init__(self,name,age,education):
+#         self.name=name
+#         self.age=age
+#         self.eduacation=education
+    
+#     def display(self):
+#         print("NAME:",self.name,"AGE:",self.age,"ËDUCATION:",self.eduacation)
+
+#     @classmethod
+#     def displaycls(cls):
+#         print("NAME:",cls.Name,"AGE:",cls.age,"EDUCATION:",cls.eduacation)
+    
+
+# class Teacher(Person):
+#       subject="Maths"
+#       salary=50000
+  
+#       def __init__(self,name,age,eduaction,subject,salary):
+#         super().__init__(name,age,eduaction)
+#         self.subject=subject
+#         self.salary=salary
+    
+#       def display(self):
+#         print("SUBJECT:",self.subject,"SALARY:",self.salary)
+#         super().display()
+
+#       @classmethod
+#       def displaycls(cls):
+#         print("SUBJECT:",cls.subject,"SALARY:",cls.salary)
+#         super().displaycls()
+
+# a1=Teacher("Jeel",22,"B.tech","Maths",50000)
+# a1.displaycls()
+              
+
+#----------------------- MULTI LEVEL INHERITANCE-------------------------------------------------------
+
+# class A:
+#     a=10
+
+#     def __init__(self,a):
+#         self.a=a
+        
+#     @classmethod
+#     def displaycls(cls):
+#         print(cls.a)
+# class B(A):
+#     b=20
+#     def __init__(self,b):
+#         self.b=b
+#     # @classmethod
+#     # def displaycls(cls):
+#     #     super().displaycls()
+#     #     print(cls.b)
+# class c(B):
+#     c=30  
+#     def __init__(self,c):
+#         self.c=c
+#     # @classmethod
+#     # def displaycls(cls):
+#     #     super().displaycls()
+#     #     print(cls.c)   
+
+# c1=c(c)
+# c.displaycls()
+# # print(c.mro())
+
+
+# exercise
+
+
+class Employee:
+    
+    name="ansh"
+    age=22
+    doj="01-12-2026"
+    salary=50000
+        
+    def __init__(self,name,age,doj,salary):  ### constructor
         self.name=name
         self.age=age
-        self.eduacation=education
+        self.doj=doj
+        self.salary=salary
+        
+    def display(self): ## object Method
+        print("NAME:",self.name,"AGE:",self.age,"Date Of Join:",self.doj,"SALARY:",self.salary)
+               
+    @classmethod  ## class method
+    def displaycls(cls):
+        print(cls.name,cls.age,cls.doj,cls.salary)
     
+class Departement(Employee):
+    department="CSE"
+  
+    def __init__(self,name,age,doj,salary,department):
+        self.department=department
+        super().__init__(name,age,doj,salary)
+
     def display(self):
-        print("NAME:",self.name,"AGE:",self.age,"ËDUCATION:",self.eduacation)
+        print("DEPT:",self.department)
+        super().display()
 
     @classmethod
     def displaycls(cls):
-        print("NAME:",cls.Name,"AGE:",cls.age,"EDUCATION:",cls.eduacation)
-    
-
-class Teacher(Person):
-      subject="Maths"
-      salary=50000
-  
-      def __init__(self,name,age,eduaction,subject,salary):
-        super().__init__(name,age,eduaction)
-        self.subject=subject
-        self.salary=salary
-    
-      def display(self):
-        print("SUBJECT:",self.subject,"SALARY:",self.salary)
-        super().display()
-
-      @classmethod
-      def displaycls(cls):
-        print("SUBJECT:",cls.subject,"SALARY:",cls.salary)
+        print(cls.department)
         super().displaycls()
 
-a1=Teacher("Jeel",22,"B.tech","Maths",50000)
-a1.displaycls()
-              
+class Manager(Departement):
+    intetive="TZ"
+    
+    def __init__(self,name,age,doj,salary,department,intetive):
+        self.intetive=intetive
+        super().__init__(name,age,doj,salary,department)
 
-      
+    
+    def display(self):
+        print("INTE:",self.intetive)
+        super().display()
+    @classmethod
+    def displaycls(cls):
+        print(cls.intetive)
+        super().displaycls()
+
+a1=Manager("Ansh",24,"01-12-26",50000,"de","aaaa")
+a1.displaycls()

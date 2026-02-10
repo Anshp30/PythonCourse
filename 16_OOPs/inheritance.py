@@ -203,7 +203,7 @@ class Departement(Employee):
         print("DEPT:",self.department)
         super().display()
 
-    @classmethod
+    @classmethod     s
     def displaycls(cls):
         print(cls.department)
         super().displaycls()

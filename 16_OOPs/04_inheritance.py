@@ -1,5 +1,6 @@
 class Animal: # Parent Class (Superclass)
     location = "Africa"
+
     def __init__(self,name):
         self.name = name
     def speak(self):
@@ -22,7 +23,7 @@ d = Dog("Rocky")
 print(d.name)
 d.speak()
 print(d.location)
-
+print("")
 c = Cat("Billi")
 print(c.name)
 c.speak()

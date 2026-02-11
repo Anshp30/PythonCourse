@@ -1,3 +1,111 @@
+# ------------class And Object-----------------------------------------------------------------------
+
+# class Creation():
+#     a=10
+#     b=20
+# c1=Creation()
+
+#  ---------------------acessing object and class member------------------------------------------
+# class Creation():
+#     a=10
+#     b=20
+# demo1=Creation()
+# demo2=Creation()
+# print(Creation.a,Creation.b)
+# print(demo1.a,demo1.b)
+# print(demo2.a,demo2.b)
+
+# ---------------------------------------------------------------------------------
+# class School:
+#     sname="AJPatel"
+#     Sid=307
+#     loc="Navsari"
+#     time="9 to 5"
+
+# s1=School()
+# print(School.sname,School.Sid,School.loc,School.time)
+# print(s1.sname,s1.Sid,s1.loc,s1.time)
+
+# -------------------------------------------------------------------------------------------------
+# class School:
+#     sname="AJPatel"
+#     Sid=307
+#     loc="Navsari"
+#     time="9 to 5"
+
+# s1=School()
+# s1.name="SDJ"
+# s1.ID="12"
+# s1.time="7 to 12"
+
+# s2=School()
+# s2.name="ABJ"
+# s2.ID="1214"
+# s2.time="7 to 3"
+
+# print(s1.name,s1.ID,s1.time)
+# print(s2.name,s2.ID,s2.time)
+
+# ----------------------------------------------------------------Method __init__ ------------------------------
+# class School:
+#     def __init__(self,name,sid,loc,time):
+#         self.NAME=name
+#         self.SID=sid
+#         self.LOC=loc
+#         self.TIme=time
+
+# s1=School("AB",15,"surat","9:30 to6:30")
+# print(s1.NAME,s1.SID,s1.LOC,s1.TIme)
+
+# -----------------------------------------------------------------------Object method------------------------------
+# class School:
+#     SNAME="jes"
+#     LOC ="Mumbai"
+#     PRINCIPLE="Ansh"
+#     TIMING='9am to 3pm'
+
+#     def __init__(self,name,sid,age,bg):
+#         self.name=name
+#         self.sid=sid
+#         self.age=age
+#         self.bg=bg
+
+        
+#     def display(self):
+#         print(self.name,self.sid,self.age,self.bg)
+
+#     def dislay_change(self,new_bg):
+#         self.bg=new_bg
+# s1=School("jeel",7,20,"A ve+")
+# s1.dislay_change("O ve-")
+# s1.display()
+
+# --------------------------class method -----------------------------------------------------------------------------------
+
+# class School:
+#     SNAME="jes"
+#     LOC ="Mumbai"
+#     PRINCIPLE="Ansh"
+#     TIMING='9am to 3pm'
+
+
+#     @classmethod    
+#     def display(cls):
+#         print(cls.SNAME,cls.LOC,cls.PRINCIPLE,cls.TIMING)
+
+#     @classmethod
+#     def dislay_change(cls,new_bg):
+#         cls.bg=new_bg
+
+# School.display()
+
+# -----------------------------Static Method -------------------------------------------------------
+
+
+
+
+
+
 # --------------------------SINGLE LEVEL INHERITANCE---------------------------------------------------------------------
 # # class A:
 #     a=10
@@ -172,57 +280,57 @@
 # exercise
 
 
-class Employee:
+# class Employee:
     
-    name="ansh"
-    age=22
-    doj="01-12-2026"
-    salary=50000
+#     name="ansh"
+#     age=22
+#     doj="01-12-2026"
+#     salary=50000
         
-    def __init__(self,name,age,doj,salary):  ### constructor
-        self.name=name
-        self.age=age
-        self.doj=doj
-        self.salary=salary
+#     def __init__(self,name,age,doj,salary):  ### constructor
+#         self.name=name
+#         self.age=age
+#         self.doj=doj
+#         self.salary=salary
         
-    def display(self): ## object Method
-        print("NAME:",self.name,"AGE:",self.age,"Date Of Join:",self.doj,"SALARY:",self.salary)
+#     def display(self): ## object Method
+#         print("NAME:",self.name,"AGE:",self.age,"Date Of Join:",self.doj,"SALARY:",self.salary)
                
-    @classmethod  ## class method
-    def displaycls(cls):
-        print(cls.name,cls.age,cls.doj,cls.salary)
+#     @classmethod  ## class method
+#     def displaycls(cls):
+#         print(cls.name,cls.age,cls.doj,cls.salary)
     
-class Departement(Employee):
-    department="CSE"
+# class Departement(Employee):
+#     department="CSE"
   
-    def __init__(self,name,age,doj,salary,department):
-        self.department=department
-        super().__init__(name,age,doj,salary)
+#     def __init__(self,name,age,doj,salary,department):
+#         self.department=department
+#         super().__init__(name,age,doj,salary)
 
-    def display(self):
-        print("DEPT:",self.department)
-        super().display()
+#     def display(self):
+#         print("DEPT:",self.department)
+#         super().display()
 
-    @classmethod     
-    def displaycls(cls):
-        print(cls.department)
-        super().displaycls()
+#     @classmethod     
+#     def displaycls(cls):
+#         print(cls.department)
+#         super().displaycls()
 
-class Manager(Departement):
-    intetive="TZ"
+# class Manager(Departement):
+#     intetive="TZ"
     
-    def __init__(self,name,age,doj,salary,department,intetive):
-        self.intetive=intetive
-        super().__init__(name,age,doj,salary,department)
+#     def __init__(self,name,age,doj,salary,department,intetive):
+#         self.intetive=intetive
+#         super().__init__(name,age,doj,salary,department)
 
     
-    def display(self):
-        print("INTE:",self.intetive)
-        super().display()
-    @classmethod
-    def displaycls(cls):
-        print(cls.intetive)
-        super().displaycls()
+#     def display(self):
+#         print("INTE:",self.intetive)
+#         super().display()
+#     @classmethod
+#     def displaycls(cls):
+#         print(cls.intetive)
+#         super().displaycls()
 
-a1=Manager("Ansh",24,"01-12-26",50000,"de","aaaa")
-a1.displaycls()
+# a1=Manager("Ansh",24,"01-12-26",50000,"de","aaaa")
+# a1.displaycls()

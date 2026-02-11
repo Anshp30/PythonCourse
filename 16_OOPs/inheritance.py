@@ -327,6 +327,7 @@
 #     def display(self):
 #         print("INTE:",self.intetive)
 #         super().display()
+
 #     @classmethod
 #     def displaycls(cls):
 #         print(cls.intetive)
@@ -334,3 +335,48 @@
 
 # a1=Manager("Ansh",24,"01-12-26",50000,"de","aaaa")
 # a1.displaycls()
+
+# ------------------------------------Multiple Inheritance---------------------------------------------
+
+# class A:
+#     a=10
+#     b=20
+#     e=45
+        
+# class B:
+#     c=30
+#     a=52
+   
+# class C(B,A):  # Left to rigth inheritance meanse first A than B c>>B>>A
+#     d=40
+   
+# c1=C()
+# print(c1.a,c1.b,c1.c,c1.d,c1.e)
+# print(C.mro())
+
+
+#  Create class calculator which is inherting from class add ,class sub ,class div and perform multiple inheritance
+
+
+class Add:
+    @staticmethod
+    def add(a,b):
+        print("The output is ",a+b)
+
+class Sub:
+    @staticmethod
+    def sub(a,b):
+        print("The output is ",a-b)
+
+
+class Div:
+    @staticmethod
+    def div(a,b):
+        print("The output is ",a/b)
+
+class calculator(Add,Sub,Div):
+    pass
+
+calculator.sub(12,10)
+calculator.add(10,20)
+calculator.div(10,5)

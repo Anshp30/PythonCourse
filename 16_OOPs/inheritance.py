@@ -358,25 +358,137 @@
 #  Create class calculator which is inherting from class add ,class sub ,class div and perform multiple inheritance
 
 
-class Add:
-    @staticmethod
-    def add(a,b):
-        print("The output is ",a+b)
+# class Add:
+#     @staticmethod
+#     def add(a,b):
+#         print("The output is ",a+b)
 
-class Sub:
-    @staticmethod
-    def sub(a,b):
-        print("The output is ",a-b)
+# class Sub:
+#     @staticmethod
+#     def sub(a,b):
+#         print("The output is ",a-b)
 
 
-class Div:
-    @staticmethod
-    def div(a,b):
-        print("The output is ",a/b)
+# class Div:
+#     @staticmethod
+#     def div(a,b):
+#         print("The output is ",a/b)
 
-class calculator(Add,Sub,Div):
-    pass
+# class calculator(Add,Sub,Div):
+#     pass
 
-calculator.sub(12,10)
-calculator.add(10,20)
-calculator.div(10,5)
+# calculator.sub(12,10)
+# calculator.add(10,20)
+# calculator.div(10,5)
+
+
+# ---------------------Hierarchichal inheritance-------------------------------
+
+# class Hospital:
+#     name="HCG"
+#     loc="Ahm"
+
+#     def __init__(self,name,loc):
+#         self.name=name
+#         self.loc=loc
+
+#     def display(self):
+#         print(self.name,self.loc)
+
+# class Employee(Hospital):
+#     name="Ansh"
+#     dept="nurse"
+    
+#     def __init__(self,ename,dept):
+#         self.ename=ename
+#         self.dept=dept
+#         super().__init__(ename,id)
+
+#     def display(self):
+#         print(self.ename,self.dept)
+#         super().display()
+
+# class Patient(Hospital):
+
+#     def __init__(self,pname,id):
+#         self.pname=pname
+#         self.id=id
+#         super().__init__(pname,id)
+
+# a1=Patient()
+
+
+
+# EX 2
+
+# class university:
+#     university_name="Mumbai"
+#     head1="mr.subh"
+
+#     def __init__(self,uid,name,mailid,contactno):
+#         self.uid=uid
+#         self.name=name
+#         self.mailid=mailid
+#         self.contactno=contactno
+    
+#     def display(self):
+#         print(self.uid,self.name,self.mailid,self.contactno)
+
+#     @classmethod
+#     def displaycls(cls):
+#         print(cls.university_name,cls.head1)
+
+# class stxaviour(university):
+#       college_name="RNG"
+#       head2="latesh"
+
+#       def __init__(self, uid, name, mailid, contactno,stxid):
+#           self.stxid=stxid
+#           super().__init__(uid, name, mailid, contactno)
+
+#       def display(self):  
+#           print(self.stxid)
+#           return super().display()
+      
+#       @classmethod
+#       def displaycls(cls):
+#           print(cls.college_name,cls.head2)
+#           super().displaycls()
+
+
+# s1=stxaviour(15,"Ansh","pansh@gmail.com",8530831552,"stx2")
+# # s1.displaycls()
+# s1.display()
+          
+       
+# --------------------------Hybride Inheritance------------------------------
+# class A:
+#     a=10
+#     b=20
+# class B(A):
+#     c=30
+#     d=40
+# class C(A):
+#     e=50
+#     f=60
+# class D(B,C):
+#     g=70
+#     h=80    
+# d1=D()
+# print(d1.a,d1.b,d1.c,d1.d,d1.e,d1.f,d1.g,d1.h)
+# print(D.mro()) 
+
+
+# ##### ------------------Encapsulation------------------------------
+
+# class Bank:
+#     __bmanager="Ramesh"
+#     def __init__(self,name,balance):
+#         self.name=name
+#         self.__balance=balance    
+# c1=Bank("Ansh",50000)
+# # c1.__balance=100000
+# # print(c1.name)
+# # print(c1.__balance)
+# Bank.bmanager="Suresh"
+# print(Bank._bmanager)  
